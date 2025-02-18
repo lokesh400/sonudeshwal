@@ -9,54 +9,33 @@
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="medium"></script>
 </head>
 <body class="bg-gray-50 min-h-screen font-[&#39;Inter&#39;]">
+
+    <div>
+        <img src="./images/results/1.png" alt="" style="width: 100%;" >
+    </div>
+
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <header class="mb-12" style="box-shadow: 0px 0px 10px;" >
-            <h1 class="text-4xl font-bold text-gray-900 text-center">Result's Gallery</h1>
+        <header class="mb-12 p-6 bg-white rounded-lg shadow-md text-center">
+            <h1 class="text-4xl font-bold text-gray-900">Result's Gallery</h1>
+            <p class="mt-4 text-lg text-gray-700">
+                Under the exceptional guidance of <strong>Sonu Sir</strong>, more than <strong>3500+ students</strong> have achieved success in various competitive exams.  
+                His dedication, innovative teaching methods, and unwavering commitment to excellence have shaped countless bright futures.  
+                Join us and be the next success story!
+            </p>
         </header>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <img src="./images/result.jpg" class="w-full h-48 object-cover object-top"/>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Brilliant Minds Academy</h3>
-                    <p class="text-gray-600">Achieving 95% success rate in JEE Advanced with specialized mentoring and innovative teaching methods.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <img src="./images/result.jpg" alt="Project Result 2" class="w-full h-48 object-cover object-top"/>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Excel Education Hub</h3>
-                    <p class="text-gray-600">Leading NEET preparation institute with 88% selection rate and comprehensive study materials.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <img src="./images/result.jpg" alt="Project Result 3" class="w-full h-48 object-cover object-top"/>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Success Point Academy</h3>
-                    <p class="text-gray-600">Specialized in banking exams with over 75% students clearing various competitive examinations.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <img src="./images/result.jpg" alt="Project Result 4" class="w-full h-48 object-cover object-top"/>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Career Catalyst Institute</h3>
-                    <p class="text-gray-600">Expert guidance for UPSC preparation with proven track record of producing top rankers.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <img src="./images/result.jpg" alt="Project Result 5" class="w-full h-48 object-cover object-top"/>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Gateway to Success</h3>
-                    <p class="text-gray-600">Premier institute for CAT preparation with 80% students scoring above 95 percentile.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <img src="./images/result.jpg" alt="Project Result 6" class="w-full h-48 object-cover object-top"/>
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Future Leaders Academy</h3>
-                    <p class="text-gray-600">Comprehensive coaching for state civil services with personalized mentoring and mock interviews.</p>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="result-div" >
         </div>
     </div>
+    <script>
+        const div = document.getElementById("result-div");
+
+        for (let i = 0; i < 19 ; i++) {
+            div.innerHTML += `
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    <img src="./images/results/${i+2}.png" class="w-full object-cover object-top" alt="Image ${i+1}"/>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
