@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Results Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="medium"></script>
+</head>
+<body class="bg-gray-50 min-h-screen font-[&#39;Inter&#39;]">
+
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-0">
+        <header class="mb-12 p-6 bg-white rounded-lg shadow-md text-center">
+            <h1 class="text-4xl font-bold text-gray-900">Photo Gallery</h1>
+            <p class="mt-4 text-lg text-gray-700">
+                Some Beautiful memories of sir
+            </p>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="result-div" >
+        </div>
+    </div>
+    <script>
+        const div = document.getElementById("result-div");
+
+        for (let i = 0; i < 19 ; i++) {
+            div.innerHTML += `
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    <img src="./images/sonusir/${i+2}.png" class="w-full object-cover object-top" alt="Image ${i+1}"/>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
