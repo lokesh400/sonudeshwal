@@ -18,6 +18,33 @@
      #id-116:hover {
          animation-play-state: paused;
           }
+
+          @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.success-scroll-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+.success-scroll-container > div {
+  flex-shrink: 0;
+}
+
+.success-scroll-container::after {
+  content: "";
+  flex-shrink: 0;
+  width: 20px; /* or adjust based on desired space */
+}
+
     </style>
     <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="medium"></script>
@@ -33,7 +60,7 @@
                             Sonu Deshwal: MATHS AND REASONING'S GOAT TEACHER
                         </h1>                        
                         <p class="mt-6 text-xl text-gray-500">Welcome to the premier coaching institutes led by Sonu Deshwal, where we&#39;ve helped over 3,500 students achieve their dreams in competitive exams. Our proven teaching methodology and personalized attention ensure the highest success rates in NDA, CTET, HTET, Railway &amp; Banking examinations.</p>
-                        <div class="mt-8 flex space-x-2">
+                        <div class="mt-8 flex space-x-4">
                             <a href="results.html">
                                 <button class="bg-custom text-white px-6 py-3 !rounded-button hover:bg-custom/90">
                                     <i class="fas fa-book-open mr-2"></i>Results
@@ -47,11 +74,6 @@
                             <a href="results.html">
                                 <button class="bg-custom text-white px-6 py-3 !rounded-button hover:bg-custom/90">
                                     <i class="fas fa-building mr-2"></i>Institutes
-                                </button>
-                            </a>
-                            <a href="gallery.html">
-                                <button class="bg-custom text-white px-6 py-3 !rounded-button hover:bg-custom/90">
-                                    <i class="fas fa-person mr-2"></i>Photo
                                 </button>
                             </a>
                         </div>
@@ -119,7 +141,7 @@
                             </div>
                             <div style="margin-left: 20px; margin-top: 10px;" >
                                 <a href="about.html">
-                                    <button class="bg-custom text-white px-6 py-3 !rounded-button hover:bg-custom/90" s >
+                                    <button class=" my-10 bg-custom text-white px-6 py-3 !rounded-button hover:bg-custom/90" s >
                                         Know More About Sir
                                     </button>
                                 </a>
@@ -231,28 +253,23 @@
         <section id="success" class="bg-white py-20">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">Success Stories</h2>
-                <div class="flex animate-scroll space-x-8 whitespace-nowrap">
-                    <div class="bg-gray-50 rounded-lg p-6 inline-block min-w-[300px]">
-                        <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young Indian male student in formal attire, smiling confidently against a neutral background, well-groomed appearance&width=400&height=400&orientation=squarish&flag=9adda218-e050-4ccd-b19d-455b6ba07f66&flag=c802f79b-3d60-40a1-9961-0ae94fc0cf50&flag=f24b1beb-4a11-4b93-914f-16c749077799&flag=070d077a-e064-4d40-9a08-773f50f2cb76&flag=66c9667f-afc7-4956-8c41-f63262cdc9fe" alt="Student" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"/>
-                        <p class="text-gray-600 text-center italic mb-4">&#34;Thanks to Sonu sir&#39;s guidance, I cleared the NDA exam in my first attempt. His teaching methodology is unique and effective.&#34;</p>
-                        <h4 class="font-bold text-center">Rahul Kumar</h4>
-                        <p class="text-sm text-gray-500 text-center">NDA Selected 2023</p>
+                <div class="success-scroll-container flex animate-scroll space-x-8 whitespace-nowrap">
+                    <div class="bg-gray-50 inline-block min-w-[300px]">
+                        <img src="./images/results/2.png" alt="Student" class="w-max h-max mx-auto mb-4 object-cover"/>
                     </div>
-                    <div class="bg-gray-50 rounded-lg p-6 inline-block min-w-[300px]">
-                        <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young Indian female student in formal attire, smiling warmly against a neutral background, well-groomed appearance&width=400&height=400&orientation=squarish&flag=ce914432-2fd9-4af3-b5ab-6f6e4cce410a&flag=43456319-b1f7-4275-a8b6-e388a5a22d0f&flag=efc98b6f-d509-4956-b928-db0f917cff5a&flag=5f08ef8f-83ce-498d-a35f-55e1f4e74a4e&flag=6d71c302-2472-4a8b-9a5d-4c57101da9a5" alt="Student" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"/>
-                        <p class="text-gray-600 text-center italic mb-4">&#34;The CTET preparation at Raj Unique Coaching Centre was comprehensive and helped me secure a great score.&#34;</p>
-                        <h4 class="font-bold text-center">Priya Sharma</h4>
-                        <p class="text-sm text-gray-500 text-center">CTET Qualified 2023</p>
+                    <div class="bg-gray-50 inline-block min-w-[300px]">
+                        <img src="./images/results/3.png" alt="Student" class="w-max h-max mx-auto mb-4 object-cover"/>
                     </div>
-                    <div class="bg-gray-50 rounded-lg p-6 inline-block min-w-[300px]">
-                        <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young Indian male student in formal attire, smiling confidently against a neutral background, well-groomed appearance&width=400&height=400&orientation=squarish&flag=d59c383b-c9bb-4d2b-beb7-c34eaca4f9fc&flag=e396d247-c766-45de-b39e-1acb4e9005f1&flag=498c2fc3-6bdf-4cf7-805d-204cc10544ef&flag=c386a068-723b-4775-8901-cb96c617b6e1&flag=f624aeb1-afcb-4900-97c9-70afc7d1401a" alt="Student" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"/>
-                        <p class="text-gray-600 text-center italic mb-4">&#34;The reasoning techniques taught by Sonu sir helped me crack the banking exam with ease.&#34;</p>
-                        <h4 class="font-bold text-center">Amit Singh</h4>
-                        <p class="text-sm text-gray-500 text-center">Bank PO Selected 2023</p>
+                    <div class="bg-gray-50 inline-block min-w-[300px]">
+                        <img src="./images/results/4.png" alt="Student" class="w-max h-max mx-auto mb-4 object-cover"/>
+                    </div>
+                    <div class="bg-gray-50 inline-block min-w-[300px]">
+                        <img src="./images/results/5.png" alt="Student" class="w-max h-max mx-auto mb-4 object-cover"/>
                     </div>
                 </div>
             </div>
         </section>
+        
 
         <section id="contact" class="bg-gray-50 py-20">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,14 +286,14 @@
                                     <i class="fas fa-map-marker-alt text-custom mt-1 mr-4"></i>
                                     <div>
                                         <h4 class="font-bold">Raj Defence Academy</h4>
-                                        <p class="text-gray-600">123 Defence Colony, New Delhi, India</p>
+                                        <p class="text-gray-600">Bright Kingdom Pragmatic School Near Saraswati Mahila College Palwal (121102) Haryana </p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i class="fas fa-map-marker-alt text-custom mt-1 mr-4"></i>
                                     <div>
                                         <h4 class="font-bold">Raj Unique Coaching Centre</h4>
-                                        <p class="text-gray-600">456 Education Hub, New Delhi, India</p>
+                                        <p class="text-gray-600">Near Domino's Pizza Delhi Mathura Road Palwal (121102) Haryana </p>
                                     </div>
                                 </div>
                             </div>
@@ -286,13 +303,13 @@
                             <div class="space-y-4">
                                 <a href="tel:+919876543210" class="flex items-center text-gray-600 hover:text-custom">
                                     <i class="fas fa-phone-alt mr-4"></i>
-                                    <span>+91 98765 43210</span>
+                                    <span>+91 7419555444 </span>
                                 </a>
                                 <a href="mailto:contact@sonudeshwal.com" class="flex items-center text-gray-600 hover:text-custom">
                                     <i class="fas fa-envelope mr-4"></i>
-                                    <span>contact@sonudeshwal.com</span>
+                                    <span>sonusirmaths369@gmail.com</span>
                                 </a>
-                                <a href="https://wa.me/919876543210" class="flex items-center text-gray-600 hover:text-custom">
+                                <a href="https://wa.me/+917419555444" class="flex items-center text-gray-600 hover:text-custom">
                                     <i class="fab fa-whatsapp mr-4"></i>
                                     <span>WhatsApp Us</span>
                                 </a>
@@ -307,10 +324,6 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <img class="h-12 w-auto mb-4" src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Sonu Deshwal"/>
-                    <p class="text-gray-400">Leading competitive exam coaching in Delhi NCR with proven results and expert guidance.</p>
-                </div>
                 <div>
                     <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
